@@ -7,4 +7,5 @@
         {{ entry.description|truncatechars:100 }}
     </p>
     <button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn btn-primary">View details</button>
+    <button data-id="{{ entry.id }}" onclick="deleteCalendarEntry(this)" class="btn btn-danger">Delete</button>
 </div>
