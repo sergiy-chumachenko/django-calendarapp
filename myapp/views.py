@@ -7,8 +7,12 @@ from .forms import EntryForm
 
 
 def index(request):
+    return render(request, 'myapp/index.html')
+
+
+def calendar(request):
     entries = Entry.objects.all()
-    return render(request, 'myapp/index.html', {'entries': entries})
+    return render(request, 'myapp/calendar.html', {'entries': entries})
 
 
 def details(request, pk):
