@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate, login
 from .models import Entry
 from .forms import EntryForm
 
@@ -8,6 +9,18 @@ from .forms import EntryForm
 
 def index(request):
     return render(request, 'myapp/index.html')
+
+
+# def login(request):
+#     username = request.POST['username']
+#     password = request.POST['password']
+#     user = authenticate(request, username=username, password=password)
+#     if user is not None:
+#         login(request, user)
+#         # redirect
+#         return HttpResponseRedirect('myapp/calendar.html')
+#     else:
+#         return HttpResponseRedirect('/')
 
 
 def calendar(request):
