@@ -7,4 +7,5 @@ body, html {
 }
 .page-center {
     margin: auto;
+    text-align: center;
 }
